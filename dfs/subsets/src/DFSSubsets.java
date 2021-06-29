@@ -21,10 +21,10 @@ public class DFSSubsets {
             return;
         }
 
+        findSubset(input, index + 1, solutionPrefix);
+        
         solutionPrefix.append(input[index]);
         findSubset(input, index + 1, solutionPrefix);
         solutionPrefix.deleteCharAt(solutionPrefix.length() - 1);
-
-        findSubset(input, index + 1, solutionPrefix);
     }
 }
